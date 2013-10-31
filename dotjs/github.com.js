@@ -12,7 +12,7 @@ if(!!$('body.page-pullrequest')[0]){
       $div = $('#js-new-comment-form-actions');
   $button.on('click', function(e){
     e.preventDefault();
-    var $textarea = $('.js-comment-field');
+    var $textarea = $('.js-new-comment-form .js-comment-field');
     $textarea.val(':shipit:');
     $textarea.parents('form').submit();
   });
