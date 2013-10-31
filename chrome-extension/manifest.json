@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Ship It Button",
+  "description": "Adds a ship it button to GitHub pull requests",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*/pull/*"],
+      "js": ["jquery.min.js" ,"ship_it.js"]
+    }
+  ]
+}
