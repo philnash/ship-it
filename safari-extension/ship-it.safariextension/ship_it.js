@@ -1,35 +1,33 @@
-(function() {
-  var imgSrc = '<img src="https://github.global.ssl.fastly.net/images/icons/emoji/shipit.png" ' +
-            'width="20" heigh="20" align="absmiddle" alt=":shipit:" title=":shipit:"' +
-            'class="emoji" />',
-      button = document.createElement('button'),
-      wrapperDiv = document.getElementById('js-new-comment-form-actions');
+(function(){
+  var img             = document.createElement('img'),
+      imageAttributes = {
+        width: "20",
+        height: "20",
+        align: "absmiddle",
+        src: "https://github.global.ssl.fastly.net/images/icons/emoji/shipit.png",
+        alt: ":shipit:",
+        title: ":shipit:",
+        class: "emoji"
+      },
+      button          = document.createElement('button'),
+      wrapperDiv      = document.getElementById('js-new-comment-form-actions'),
+      correctPage     = !!document.querySelector('body.page-pullrequest'),
+      handleClick     = function(e){
+        var textarea = document.querySelector('.js-new-comment-form .js-comment-field'),
+            form     = document.querySelector('.js-new-comment-form');
+        e.preventDefault();
+        textarea.value = textarea.value + " :shipit:";
+        form.submit();
+      },
+      key;
 
-  button.setAttribute('class', 'button');
-  button.innerHTML = imgSrc;
-  button.onclick = function(e) {
-    e.preventDefault();
-    var textareas = document.getElementsByClassName('js-comment-field'),
-        textarea = null;
-
-    for(var i = 0; i < textareas.length; i++) {
-      if('comment[body]' === textareas[i].getAttribute('name')) {
-        textarea = textareas[i];
-        break;
-      }
+  if(correctPage){
+    for(key in imageAttributes){
+      img.setAttribute(key, imageAttributes[key]);
     }
-
-    if(textarea) {
-      var parent = textarea.parentElement;
-      textarea.innerHTML = ':shipit:';
-      while('FORM' !== parent.tagName && 'BODY' !== parent.tagName) {
-        parent = parent.parentElement;
-      }
-      if('FORM' === parent.tagName) {
-        parent.submit();
-      }
-    }
+    button.setAttribute('class', 'button');
+    button.appendChild(img);
+    button.addEventListener('click', handleClick, false);
+    wrapperDiv.appendChild(button);
   }
-
-  wrapperDiv.appendChild(button);
 })();
