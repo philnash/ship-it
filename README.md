@@ -4,7 +4,7 @@ For when you want to ship things fast. No need to write comments on pull request
 
 ## How does it work?
 
-When you click the Ship It button, you will instantly comment ":shipit:" on the pull request in question. That's it!
+When you click the Ship It button, you will instantly append " :shipit:" to the end and submit your comment on the pull request in question. That's it!
 
 ![image](https://raw.github.com/philnash/ship-it/master/example/ship-it-button.png)
 
