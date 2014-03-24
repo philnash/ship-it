@@ -3,7 +3,7 @@
 // @namespace   http://userscripts.org/users/537150
 // @description Adds a ship it button to GitHub pull requests
 // @include     https://github.com/*/*/pull/*
-// @version     2
+// @version     2.1
 // @grant       none
 // ==/UserScript==
 
