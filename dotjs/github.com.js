@@ -25,7 +25,7 @@
     for(key in imageAttributes){
       img.setAttribute(key, imageAttributes[key]);
     }
-    button.setAttribute('class', 'button primary');
+    button.setAttribute('class', 'button');
     button.appendChild(img);
     button.addEventListener('click', handleClick, false);
     wrapperDiv.appendChild(button);
