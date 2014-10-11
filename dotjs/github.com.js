@@ -4,13 +4,13 @@
         width: "20",
         height: "20",
         align: "absmiddle",
-        src: "https://github.global.ssl.fastly.net/images/icons/emoji/shipit.png",
+        src: "https://assets-cdn.github.com/images/icons/emoji/shipit.png",
         alt: ":shipit:",
         title: ":shipit:",
         class: "emoji"
       },
       button          = document.createElement('button'),
-      wrapperDiv      = document.getElementById('js-new-comment-form-actions'),
+      wrapperDiv      = document.querySelector('.js-new-comment-form .form-actions'),
       correctPage     = !!document.querySelector('div.view-pull-request'),
       handleClick     = function(e){
         var textarea = document.querySelector('.js-new-comment-form .js-comment-field'),
