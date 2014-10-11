@@ -12,6 +12,6 @@ When you click the Ship It button, you will instantly append " :shipit:" to the 
 
 * Greasemonkey: [Userscripts](http://userscripts.org/scripts/show/181156)
 * [dotjs](https://github.com/defunkt/dotjs): [download the file here](https://raw.github.com/philnash/ship-it/master/dotjs/github.com.js)
-* Chrome extension: (coming soon)
+* Chrome extension: [Chrome web store](https://chrome.google.com/webstore/detail/ship-it-button/cibfjehknilmbcmigalgodekifkiikel)
 * Safari extension: [download the file here](https://raw.github.com/philnash/ship-it/master/safari-extension/ship-it.safariextz)
 * More? Please send suggestions!
