@@ -1,32 +1,20 @@
 (function(){
-  var img             = document.createElement('img'),
-      imageAttributes = {
-        width: "20",
-        height: "20",
-        align: "absmiddle",
-        src: "https://assets-cdn.github.com/images/icons/emoji/shipit.png",
-        alt: ":shipit:",
-        title: ":shipit:",
-        class: "emoji"
-      },
-      button          = document.createElement('button'),
-      wrapperDiv      = document.querySelector('.js-new-comment-form .form-actions'),
-      correctPage     = !!document.querySelector('div.view-pull-request'),
+  var button          = document.createElement('button'),
+      wrapperDiv      = document.querySelector('.gh-header-actions'),
+      correctPage     = !!document.querySelector('.js-comment-and-button'),
       handleClick     = function(e){
-        var textarea = document.querySelector('.js-new-comment-form .js-comment-field'),
+        var textarea = document.querySelector('#new_comment_field'),
             form     = document.querySelector('.js-new-comment-form');
         e.preventDefault();
-        textarea.value = textarea.value + " :shipit:";
+        textarea.value = textarea.value + "Ship it! :shipit: ";
         form.submit();
+        textarea.value = "";
       },
       key;
 
   if(correctPage){
-    for(key in imageAttributes){
-      img.setAttribute(key, imageAttributes[key]);
-    }
-    button.setAttribute('class', 'button');
-    button.appendChild(img);
+    button.setAttribute('class', 'btn btn-second');
+    button.appendChild(document.createTextNode("Ship it")); 
     button.addEventListener('click', handleClick, false);
     wrapperDiv.appendChild(button);
   }
